@@ -1,0 +1,26 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
+
+interface AnimatedSectionProps {
+  id?: string;
+  className?: string;
+  children: ReactNode;
+}
+
+export function AnimatedSection({ id, className, children }: AnimatedSectionProps) {
+  return (
+    <motion.section
+      id={id}
+      className={cn("scroll-mt-32", className)}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
+      {children}
+    </motion.section>
+  );
+}
