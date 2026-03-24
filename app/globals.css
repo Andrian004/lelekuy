@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 70% 7%;
+  --foreground: 180 20% 98%;
+  --muted: 200 30% 35%;
+  --card: 210 45% 15%;
+  --border: 190 25% 35%;
+  --primary: 168 84% 42%;
+  --secondary: 194 89% 48%;
+}
+
+* {
+  @apply border-border;
+}
+
+html,
+body {
+  @apply min-h-screen bg-background text-foreground antialiased;
+}
+
+a {
+  @apply transition-colors;
+}
