@@ -16,6 +16,10 @@
   @apply border-border;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   @apply min-h-screen bg-background text-foreground antialiased;

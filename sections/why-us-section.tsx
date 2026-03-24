@@ -14,7 +14,7 @@ const features = [
 
 export function WhyUsSection() {
   return (
-    <AnimatedSection className="px-6 py-20 md:px-12 lg:px-20">
+    <AnimatedSection id="keunggulan" className="px-6 py-20 md:px-12 lg:px-20">
       <SectionHeading
         eyebrow="Keunggulan"
         title="Kenapa Mitra Memilih Kami"

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 import { Button } from "@/components/ui/button";
 
@@ -11,10 +12,14 @@ export function CtaSection() {
           usaha Anda.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Button size="lg">Pesan Sekarang</Button>
-          <Button size="lg" variant="secondary">
-            Hubungi Kami
-          </Button>
+          <Link href="/#kontak">
+            <Button size="lg">Pesan Sekarang</Button>
+          </Link>
+          <Link href="https://wa.me/6281234567890">
+            <Button size="lg" variant="secondary">
+              Hubungi Kami
+            </Button>
+          </Link>
         </div>
       </div>
     </AnimatedSection>

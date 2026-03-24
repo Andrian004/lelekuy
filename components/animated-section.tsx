@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 interface AnimatedSectionProps {
   id?: string;
@@ -13,7 +14,7 @@ export function AnimatedSection({ id, className, children }: AnimatedSectionProp
   return (
     <motion.section
       id={id}
-      className={className}
+      className={cn("scroll-mt-32", className)}
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}

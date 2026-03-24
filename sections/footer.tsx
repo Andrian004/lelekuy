@@ -1,6 +1,14 @@
+import Link from "next/link";
 import { FishSymbol } from "lucide-react";
 
-const navs = ["Tentang", "Produk", "Keunggulan", "Galeri", "Kontak"];
+const navs = [
+  { label: "Beranda", href: "/" },
+  { label: "Produk", href: "/#produk" },
+  { label: "Keunggulan", href: "/#keunggulan" },
+  { label: "Galeri", href: "/#galeri" },
+  { label: "Tentang", href: "/about" },
+  { label: "Kontak", href: "/#kontak" }
+];
 
 export function Footer() {
   return (
@@ -18,7 +26,11 @@ export function Footer() {
 
         <ul className="flex flex-wrap gap-4 text-sm text-cyan-100/80">
           {navs.map((item) => (
-            <li key={item}>{item}</li>
+            <li key={item.label}>
+              <Link href={item.href} className="transition hover:text-white">
+                {item.label}
+              </Link>
+            </li>
           ))}
         </ul>
       </div>

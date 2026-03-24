@@ -19,7 +19,7 @@ const images = [
 
 export function GallerySection() {
   return (
-    <AnimatedSection className="px-6 py-20 md:px-12 lg:px-20">
+    <AnimatedSection id="galeri" className="px-6 py-20 md:px-12 lg:px-20">
       <SectionHeading
         eyebrow="Galeri"
         title="Visual Budidaya yang Transparan"

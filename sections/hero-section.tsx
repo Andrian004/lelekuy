@@ -1,12 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowDown, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden px-6 pb-20 pt-28 md:px-12 lg:px-20">
+    <section id="beranda" className="relative isolate overflow-hidden px-6 pb-20 pt-10 md:px-12 lg:px-20">
       <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.25),transparent_40%),radial-gradient(circle_at_80%_10%,rgba(34,211,238,0.35),transparent_35%),linear-gradient(to_bottom,#021827,#031d2f_35%,#0a2632)]" />
       <motion.div
         className="absolute -left-20 top-20 -z-10 h-80 w-80 rounded-full bg-cyan-400/30 blur-[120px]"
@@ -54,10 +55,14 @@ export function HeroSection() {
           transition={{ delay: 0.35, duration: 0.8 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <Button size="lg">Lihat Produk</Button>
-          <Button variant="secondary" size="lg">
-            Hubungi Kami
-          </Button>
+          <Link href="/#produk">
+            <Button size="lg">Lihat Produk</Button>
+          </Link>
+          <Link href="/#kontak">
+            <Button variant="secondary" size="lg">
+              Hubungi Kami
+            </Button>
+          </Link>
         </motion.div>
 
         <motion.div
